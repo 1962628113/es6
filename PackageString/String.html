@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+<div id="result">
+    <ul></ul>
+</div>
+</body>
+<script>
+    for (let codePoint of 'foo') {
+        console.log(codePoint)
+    }
+    console.log('wqs'.indexOf('a'))
+    console.log('wqs'.includes('a'))
+    console.log('wqs'.startsWith('w'))
+    console.log('wqs'.endsWith('s'))
+    console.log('wqs'.repeat(3))
+    //es7
+    console.log('wqs'.padStart(5, 'aa'))
+    console.log('wqs'.padEnd(5, 'aa'))
+    //模板字符串
+    let str = 'return ' + '`Hello ${name}!`';
+    let func = new Function('name', str);
+    console.log(func('Jack'))
+
+  var data=[123,456,789]
+    data.forEach(function (item) {
+        var li=`<li>${item}</li>`
+        $('#result ul').append(li)
+    })
+</script>
+</html>
