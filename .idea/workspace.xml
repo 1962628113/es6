@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71e354-6a4e-4644-b7b7-a463421c3fd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PackageString/inheritCall.html" beforeDir="false" afterPath="$PROJECT_DIR$/PackageString/inheritCall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageString/inherit.html" beforeDir="false" afterPath="$PROJECT_DIR$/PackageString/inherit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageString/prototype_chaining.html" beforeDir="false" afterPath="$PROJECT_DIR$/PackageString/prototype_chaining.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,20 +37,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PackageString/inherit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="424">
+              <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PackageString/inheritCall.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+              <folding>
+                <element signature="n#script#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PackageString/inheritCall.html">
+        <entry file="file://$PROJECT_DIR$/PackageString/prototype_chaining.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-              <folding>
-                <element signature="n#script#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="445">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -75,13 +85,14 @@
         <option value="$PROJECT_DIR$/PackageString/index1.html" />
         <option value="$PROJECT_DIR$/PackageString/closure.html" />
         <option value="$PROJECT_DIR$/PackageString/closure1.html" />
-        <option value="$PROJECT_DIR$/PackageString/inherit.html" />
         <option value="$PROJECT_DIR$/PackageString/inheritCall.html" />
+        <option value="$PROJECT_DIR$/PackageString/inherit.html" />
+        <option value="$PROJECT_DIR$/PackageString/prototype_chaining.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="712" />
+    <option name="x" value="292" />
     <option name="width" value="1646" />
     <option name="height" value="1047" />
   </component>
@@ -128,15 +139,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.inheritCall.html">
+  <component name="RunManager" selected="JavaScript Debug.prototype_chaining.html">
     <configuration name="inheritCall.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/es6/PackageString/inheritCall.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="inherit.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/es6/PackageString/inherit.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="prototype_chaining.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/es6/PackageString/prototype_chaining.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.prototype_chaining.html" />
         <item itemvalue="JavaScript Debug.inheritCall.html" />
         <item itemvalue="JavaScript Debug.inherit.html" />
       </list>
@@ -153,12 +168,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554275807232</updated>
       <workItem from="1554275808501" duration="10875000" />
-      <workItem from="1554347284641" duration="7516000" />
+      <workItem from="1554347284641" duration="9158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18391000" />
+    <option name="totallyTimeSpent" value="20033000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -170,7 +185,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="712" y="0" width="1646" height="1047" extended-state="0" />
+    <frame x="292" y="0" width="1646" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -246,20 +261,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PackageString/inherit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PackageString/inheritCall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="157">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
           <folding>
             <element signature="n#script#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PackageString/inherit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PackageString/prototype_chaining.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>原型链</title>
 </head>
 <body>
 
 </body>
+<script>
+    function classA() {
+
+    }
+    classA.prototype.color='red'
+    classA.prototype.sayColor=function () {
+        alert(this.color)
+    }
+    // var a=new classA()
+    // a.sayColor()
+    function classB() {
+
+    }
+    classB.prototype=new classA()
+    classB.prototype.sName='123'
+    classB.prototype.sayName=function(){
+        alert(this.sName)
+    }
+    var a=new classA()
+    a.sayColor()
+    alert(a instanceof classA)
+
+    var b=new classB()
+    alert(b instanceof classB)
+    b.sayColor()
+    var c=new classB()
+    c.sayName()
+</script>
 </html>
