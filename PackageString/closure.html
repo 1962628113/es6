@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>闭包</title>
 </head>
 <body>
 
 </body>
+<script>
+    var number1=1;
+    function f(number2,number3) {
+        function  f1() {
+            return number3+number2+number1
+        }
+        return f1()
+    }
+    console.log(f(2,3))
+</script>
 </html>
