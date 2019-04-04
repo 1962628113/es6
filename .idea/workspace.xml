@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71e354-6a4e-4644-b7b7-a463421c3fd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PackageString/closure1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PackageString/inherit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageString/inherit.html" beforeDir="false" afterPath="$PROJECT_DIR$/PackageString/inherit.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PackageString/inherit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -70,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="568" />
-    <option name="y" value="43" />
+    <option name="x" value="283" />
+    <option name="y" value="24" />
     <option name="width" value="1646" />
     <option name="height" value="984" />
   </component>
@@ -139,12 +137,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554275807232</updated>
       <workItem from="1554275808501" duration="10875000" />
-      <workItem from="1554347284641" duration="5247000" />
+      <workItem from="1554347284641" duration="5977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16122000" />
+    <option name="totallyTimeSpent" value="16852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -156,7 +154,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="568" y="43" width="1646" height="984" extended-state="0" />
+    <frame x="283" y="24" width="1646" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -234,8 +232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PackageString/inherit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        <state relative-caret-position="180">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
     </entry>
