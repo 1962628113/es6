@@ -8,6 +8,23 @@
 
 </body>
 <script>
-
+    function timeout(ms) {
+        return new Promise(function (resolve,reject) {
+            setTimeout(resolve,ms,'123');
+        });
+    }
+    timeout(1000).then(function (value) {
+        console.log(value)
+    },function (error) {
+        console.log(error)
+    })
+    let promise=new Promise(function (resolve,reject) {
+       console.log('Promise')
+        resolve()
+    })
+    promise.then(function () {
+        console.log('resolved')
+    })
+    console.log('hi')
 </script>
 </html>
