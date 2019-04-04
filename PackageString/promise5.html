@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var someAsyncThing = function() {
+        return new Promise(function(resolve, reject) {
+            resolve(x + 2);
+        });
+    };
+    someAsyncThing().then(function() {
+        return someOtherAsyncThing();
+    }).catch(function(error) {
+        console.log('oh no', error);
+        y + 2;
+    }).catch(function(error) {
+        console.log('carry on',error);
+    });
+</script>
+</html>
