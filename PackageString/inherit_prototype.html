@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>混合模式</title>
+</head>
+<body>
+
+</body>
+<script>
+    function ClassA(sColor) {
+        this.color=sColor
+    }
+    ClassA.prototype.sayColor=function () {
+        alert(this.color)
+    }
+    function ClassB(sColor,sName) {
+        ClassA.call(this,sColor)
+        this.sName=sName
+    }
+    ClassB.prototype=new ClassA()
+
+    ClassB.prototype.sayName=function () {
+        alert(this.sName)
+    }
+    var a=new ClassA('green')
+    a.sayColor()
+    var b=new ClassB('red','name')
+    b.sayName()
+</script>
+</html>
