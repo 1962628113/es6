@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function ClassA(sColor) {
+        this.color=sColor;
+        this.sayColor=function () {
+            alert(this.color)
+        }
+    }
+    function ClassB(sColor, sName) {
+        this.newMethod=ClassA;
+        this.newMethod(sColor)
+        delete  this.newMethod
+
+        this.sName=sName;
+        this.sayName=function () {
+            alert(this.sName)
+        }
+    }
+    var A=new ClassA('1')
+    var  B=new ClassB('2','3')
+    A.sayColor()
+    B.sayColor()
+    B.sayName()
+</script>
+</html>
