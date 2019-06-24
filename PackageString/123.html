@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function add() {
+        var arr=[].concat(...arguments);
+        if( arr.some(function(ele){
+            debugger
+            return typeof ele!="number";
+        }) ){
+            debugger//参数出现非数字类型，返回undefined
+            return undefined;
+        }
+        if( arr.length==2 ){
+            debugger
+            return arr[0]+arr[1];
+        }
+        return function(a){
+            debugger
+            if( typeof a != "number" ){  //同上
+                return undefined;
+            }
+            debugger
+            return a+arr[0];
+        };
+    }
+
+    add(2)(3);
+
+
+
+</script>
+</html>

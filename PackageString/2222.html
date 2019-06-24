@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <style>
+        /*// css部分*/
+        #canvas {
+            background-color: #AAAAAA;
+            position: relative;
+            background-size:100% 100%;
+            border: 2px solid blue;
+        }
+
+        #canvas>div {
+            border: 2px solid green;
+            position: absolute;
+            background-color: #eaeaea;
+        }
+        #canvas>div>span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: simsun;
+            font-size: 9pt;
+        }
+    </style>
+</head>
+<body>
+<!--// html部分-->
+<div id="canvas" style="width:850px;height:477px"></div>
+</body>
+<script>
+    // js部分
+    var canvasWidth= 850;
+    var canvasHeight = 477;
+    var allDivNum = 1;
+    CanvasExt = {
+        drawRect: function(canvas) {//参数canvas--所画素材框的区域
+            var that = this;
+
+// canvas 的矩形框
+            var canvasRect = canvas.getBoundingClientRect();
+// 矩形框的左上角坐标
+            var canvasLeft = canvasRect.left;
+            var canvasTop = canvasRect.top;
+            var x = 0;
+            var y = 0;
+
+// 鼠标点击按下事件,画图准备
+            $(document).on('mousedown', '#canvas', function(e) {
+// 解决修改时已存在素材框等，删除后再新增存在id重复问题
+                var date = new Date().getTime();
+                var id = "newDiv" + date + parseInt(Math.random()*10);
+
+                var divEle = "";
+// x y为鼠标的落点
+                x = e.clientX - canvasLeft;
+                y = e.clientY - canvasTop;
+
+//创建div
+                divEle = document.createElement('div');
+                divEle.setAttribute("id", id);
+
+                canvas.append(divEle)
+                divEle.style.top = y + "px";
+                divEle.style.left = x + "px";
+
+// 绑定删除操作
+//                 var menu = new BootstrapMenu('#' + id, {
+//                     actions: [{
+//                         name: '删除展示框',
+//                         onClick: function() {
+//                             del(id);
+//                         }
+//                     }]
+//                 });
+                var tx = 0;
+                var ty = 0;
+                var twidth = 0;
+                var theight = 0;
+
+// 添加拖拽操作
+                divEle.onmousedown = function(e) {
+                    e.stopPropagation();// 阻止时间冒泡
+                    var divEleRect = this.getBoundingClientRect();
+                    var divEleLeft = e.clientX - divEleRect.left;
+                    var divEleTop = e.clientY - divEleRect.top;
+
+                    this.onmousemove = function(e) {
+                        e.stopPropagation();
+                        tx = e.clientX - canvasLeft - divEleLeft;
+                        ty = e.clientY - canvasTop - divEleTop;
+// 重新获取当前对象的宽和高
+                        twidth = document.getElementById(id).style.width;
+                        twidth = parseInt(twidth);
+                        theight = document.getElementById(id).style.height;
+                        theight = parseInt(theight);
+// 边界检测
+                        if(tx <= 0) {
+                            tx = 0;
+                            this.style.left = 0 + "px";
+                        } else if(tx + twidth > canvasWidth) {
+                            tx = canvasWidth - twidth;
+                            this.style.left = (canvasWidth - twidth) + "px";
+                        } else {
+                            this.style.left = tx + "px";
+                        }
+                        if(ty <= 0) {
+                            ty = 0;
+                            this.style.top = 0 + "px";
+                        } else if((ty + theight) > canvasHeight) {
+                            y = canvasHeight - theight;
+                            this.style.top = (canvasHeight - theight) + "px";
+                        } else {
+                            this.style.top = ty + "px";
+                        }
+                    }
+                    this.onmouseup = function(e) {
+                        var id = $(this).attr("id");
+                        e.stopPropagation();
+                        this.onmousemove = null;
+                    }
+                };
+
+//鼠标移动事件，画图
+                var width = 0;
+                var height = 0;
+                canvas.onmousemove = function(e) {
+                    e.stopPropagation();
+// width height是鼠标移动末尾距鼠标起始位置的差值
+                    width = e.clientX - canvasLeft - x;
+                    height = e.clientY - canvasTop - y;
+                    divEle.style.width = width + "px";
+                    divEle.style.height = height + "px";
+
+                    var tw = e.clientX - canvasLeft;
+                    var th = e.clientY - canvasTop;
+                    if(tw >= (parseInt(canvasWidth)-7) || th >=
+                        (parseInt(canvasHeight)-7)){ // 比canvas少3px,为了易于判断
+
+                        allDivNum++;
+                        divEle.innerHTML = "<span>素材框" + allDivNum + "</span>";
+                        canvas.onmousemove = null;
+                        canvas.onmouseup = null;
+                        return;
+                    }
+                }
+                canvas.onmouseup = function(e) {
+                    if(width < 10 || height < 10) {
+                        canvas.removeChild(divEle);
+                    } else {
+                        allDivNum++;
+                        divEle.innerHTML = "<span>素材框" + allDivNum + "</span>";
+                    }
+                    e.stopPropagation();
+                    canvas.onmousemove = null;
+                }
+            });
+
+        }
+    };
+    window.onload = function() {
+        var canvas = document.getElementById("canvas");
+        CanvasExt.drawRect(canvas);
+// 取消默认右击事件
+        document.oncontextmenu = function(e) {
+            e.preventDefault();
+        }
+    };
+</script>
+</html>
